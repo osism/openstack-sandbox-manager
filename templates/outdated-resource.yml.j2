@@ -1,0 +1,15 @@
+subject: "{{ type|capitalize }} {{ name }} outdated"
+body: |
+  The {{ type }} {{ name }} ({{ id }})
+  from the project {{ project }} is outdated.
+
+  The resource is {{ diff }} days old. The threshold for the project {{ project }} is {{ threshold }} days.
+
+  Please check if this resource is still needed and release it accordingly.
+
+  Please note that the project {{ project }} is a sandbox. Resources in this project
+  can be deleted automatically after more than {{ (threshold * 1.5) | int }} days.
+  Long-term required resources should not be created in this project.
+
+  -- 
+  This is an automatically generated mail - please do not reply to it.

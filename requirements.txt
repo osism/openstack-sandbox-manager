@@ -1,0 +1,6 @@
+jinja2
+openstacksdk
+oslo.config
+python-dateutil
+pyyaml
+requests
