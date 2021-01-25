@@ -1,7 +1,5 @@
 # openstack-sandbox
 
-[![Build Status](https://travis-ci.org/betacloud/openstack-sandbox.svg?branch=master)](https://travis-ci.org/betacloud/openstack-sandbox)
-
 ## Usage
 
 * Create `clouds.yml` on basis of `clouds.yml.sample`
