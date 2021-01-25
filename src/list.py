@@ -18,7 +18,7 @@ opts = [
   cfg.BoolOpt('debug', required=False, default=False),
   cfg.StrOpt('cloud', help='Managed cloud', default='service'),
   cfg.StrOpt('domainid', help='Domain ID', required=True),
-  cfg.StrOpt('projectname', help='Project name, required=True'),
+  cfg.StrOpt('projectname', help='Project name, required=True', default='common-sandbox'),
   cfg.IntOpt('threshold', help='Threshold in days', default=30),
   cfg.StrOpt('mailgunapi', default='https://api.mailgun.net/v3/betacloud.io/messages'),
   cfg.StrOpt('mailgunkey', required=False),
