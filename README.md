@@ -8,11 +8,11 @@
 Show resources that are older than `THRESHOLD` days:
 
 ```
-$ tox -e list -- --cloud service --projectname sandbox --domain DOMAIN --threshold THRESHOLD
+$ tox -- --cloud service --projectname sandbox --domain DOMAIN --threshold THRESHOLD
 ```
 
 Send a notification to an owner whose resource is older than `THRESHOLD` days:
 
 ```
-$ tox -e list -- --cloud service --projectname sandbox --domain DOMAIN --threshold THRESHOLD --mailgunkey MAILGUN_API_KEY
+$ tox -- --cloud service --projectname sandbox --domain DOMAIN --threshold THRESHOLD --mailgunkey MAILGUN_API_KEY
 ```
