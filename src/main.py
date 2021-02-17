@@ -22,7 +22,7 @@ opts = [
   cfg.StrOpt('mgapi', default='https://api.mailgun.net/v3/betacloud.io/messages'),
   cfg.StrOpt('mgfrom', default='Betacloud Operations <noreply@betacloud.io>'),
   cfg.StrOpt('mgkey', required=False),
-  cfg.StrOpt('mgproject', default='common-sandbox')
+  cfg.StrOpt('mgproject', default='common-sandbox'),
   cfg.StrOpt('project', help='Project, required=True')
 ]
 CONF.register_cli_opts(opts)
