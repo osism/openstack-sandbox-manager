@@ -18,7 +18,7 @@ opts = [
   cfg.BoolOpt('debug', required=False, default=False),
   cfg.StrOpt('cloud', help='Managed cloud', default='service'),
   cfg.StrOpt('domain', help='Domain', required=True),
-  cfg.StrOpt('projectname', help='Project name, required=True', default='common-sandbox'),
+  cfg.StrOpt('project', help='Project, required=True', default='common-sandbox'),
   cfg.IntOpt('threshold', help='Threshold in days', default=30),
   cfg.StrOpt('mailgunapi', default='https://api.mailgun.net/v3/betacloud.io/messages'),
   cfg.StrOpt('mailgunkey', required=False),
@@ -56,7 +56,7 @@ def send_mail(to, payload, mailgunfrom, mailgunapi, mailgunkey):
 
 if __name__ == '__main__':
     cloud = openstack.connect(cloud=CONF.cloud)
-    project = cloud.get_project(CONF.projectname, domain_id=CONF.domain)
+    project = cloud.get_project(CONF.project, domain_id=CONF.domain)
 
     utc = pytz.UTC
     now = utc.localize(datetime.now())
