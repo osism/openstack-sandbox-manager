@@ -18,12 +18,11 @@ opts = [
   cfg.BoolOpt('debug', required=False, default=False),
   cfg.IntOpt('threshold', help='Threshold in days', default=30),
   cfg.StrOpt('cloud', help='Managed cloud', default='service'),
-  cfg.StrOpt('domain', help='Domain', required=True),
   cfg.StrOpt('mgapi', default='https://api.mailgun.net/v3/betacloud.io/messages'),
   cfg.StrOpt('mgfrom', default='Betacloud Operations <noreply@betacloud.io>'),
   cfg.StrOpt('mgkey', required=False),
   cfg.StrOpt('mgproject', default='common-sandbox'),
-  cfg.StrOpt('project', help='Project, required=True')
+  cfg.StrOpt('osproject', help='Project, required=True')
 ]
 CONF.register_cli_opts(opts)
 CONF(sys.argv[1:], project=PROJECT_NAME)
@@ -63,7 +62,7 @@ if __name__ == '__main__':
 
     threshold = timedelta(days=(CONF.threshold + 1))
 
-    for instance in cloud.list_servers(filters={"project_id": CONF.project}):
+    for instance in cloud.list_servers(filters={"project_id": CONF.osproject}):
         logging.debug("checking instance %s" % instance.name)
 
         created_at = parser.parse(instance.created_at)
