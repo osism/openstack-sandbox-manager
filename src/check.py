@@ -91,7 +91,7 @@ if __name__ == '__main__':
 
                 if not CONF.dry_run and instance.status == "ACTIVE":
                     logging.info("stopping instance %s (%s) from %s" % (instance.name, instance.id, user.name))
-                    cloud.stop_server(instance.id)
+                    cloud.compute.stop_server(instance.id)
             else:
                 logging.info("instance %s (%s): %s (owned by non-findable user)" %
                              (instance.name, instance.id, created_at.strftime("%Y-%m-%d %H:%M")))
