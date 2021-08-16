@@ -89,7 +89,7 @@ if __name__ == '__main__':
                     payload = yaml.load(render("templates/outdated-resource.yml.j2", context), Loader=yaml.SafeLoader)
                     send_mail(user.email, payload, CONF.mailgun_from, CONF.mailgun_api, CONF.mailgun_key)
 
-                if not CONF.dry_run:
+                if not CONF.dry_run and instance.status == "ACTIVE":
                     logging.info("stopping instance %s (%s) from %s" % (instance.name, instance.id, user.name))
                     # cloud.stop_server(instance.id)
             else:
