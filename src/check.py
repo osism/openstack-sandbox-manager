@@ -22,7 +22,7 @@ opts = [
   cfg.StrOpt('mailgun-api', default='https://api.mailgun.net/v3/betacloud.io/messages', required=False),
   cfg.StrOpt('mailgun-from', default='Betacloud Operations <noreply@betacloud.io>', required=False),
   cfg.StrOpt('mailgun-key', required=False),
-  cfg.StrOpt('project', default='common-sandbox', help='Project', required=True')
+  cfg.StrOpt('project', default='common-sandbox', help='Project', required='True')
 ]
 CONF.register_cli_opts(opts)
 CONF(sys.argv[1:], project=PROJECT_NAME)
