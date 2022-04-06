@@ -1,4 +1,4 @@
-PyYAML==5.4.1
+PyYAML==6.0
 jinja2==2.11.3
 openstacksdk==0.61.0
 oslo.config==8.8.0
