@@ -4,4 +4,4 @@ openstacksdk==1.1.0
 oslo.config==9.1.1
 python-dateutil==2.8.2
 pytz==2023.3
-requests==2.30.0
+requests==2.31.0
