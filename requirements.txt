@@ -1,6 +1,6 @@
 PyYAML==6.0.2
 jinja2==3.1.6
-openstacksdk==4.6.0
+openstacksdk==4.7.0
 oslo.config==10.0.0
 python-dateutil==2.9.0.post0
 pytz==2025.2
